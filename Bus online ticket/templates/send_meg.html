@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bus Ticket</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .ticket {
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .ticket-info {
+      margin-bottom: 20px;
+    }
+
+    .ticket-info span {
+      font-weight: bold;
+    }
+
+    .ticket-info p {
+      margin: 5px 0;
+    }
+
+    .footer {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="ticket">
+    <div class="header">
+      <h2>Bus Ticket</h2>
+    </div>
+
+    <div class="ticket-info">
+      <p><span>Passenger:</span>{{ name }}</p>
+      <p><span>Date:</span>{{ date }</p>
+      <p><span>From:</span>{{ from_location }}</p>
+      <p><span>To:</span>{{ to_location }}</p>
+      <p><span>Departure Time:</span> 10:00 AM</p>
+      <p><span>Arrival Time:</span> 12:00 PM</p>
+      <p><span>Seat Number:</span> 12A</p>
+    </div>
+
+    <div class="footer">
+      <p>Thank you for choosing our bus service!</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Bus Ticket Booking</title>
+    <style>
+        /* Add some basic styles */
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".p").click(function(){
+    $(".p").hide();
+  });
+});
+</script>
+
+</head>
+<body>
+    <h1>Online Bus Ticket Booking</h1>
+  <form action="/" method="POST" autocomplete="off">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category,message in messages %}
+                        <div class="alert alert-{{category}}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+        {% endwith %}
+
+      <label for="name"><b>Passenger Name :</b></label>
+        <input type="text" id="name" name="name" required><br>
+
+      <label for="from"><b>From :</b></label>
+        <input type="text" id="from" name="from" required><br>
+
+        <label for="to"><b>To :</b></label>
+        <input type="text" id="to" name="to" required><br>
+
+        <label for="date"><b>Date of Travel :</b></label>
+        <input type="date" id="date" name="date" required><br>
+
+        <label for="email"><b>Email :</b></label>
+        <input type="email" id="email" name="email" required><br>
+
+        <input type="submit" value="Book Now">
+
+    </form>
+
+</body>
+</html>
